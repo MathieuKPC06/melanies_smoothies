@@ -44,4 +44,5 @@ if ingredients_list:
         # Fix the st.success syntax - it uses format method instead of comma separation
         st.success(f'Congrats {name_on_order}! Your Smoothie is ordered! ✅')
 
-st.text(smoothiefroot_response.json())
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
